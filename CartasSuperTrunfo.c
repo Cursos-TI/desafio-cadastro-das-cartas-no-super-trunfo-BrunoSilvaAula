@@ -28,13 +28,31 @@ void cadastrarCartas(Carta *carta, int *quantidade){
     scanf("%f", &carta[*quantidade].area);
 
     printf("Digite o numero de pontos turisticos: ");
-    scanf("%d", &carta.[*quantidade].pontosTuristico);
+    scanf("%d", &carta[*quantidade].pontosTuristico);
 
     (*quantidade)++;
     
     printf("---Cadastrado com Sucesso---");
 }
 
+void exibirCartas(Carta *cartas, int quantidade){
+    if(quantidade == 0){
+        printf("Nenhuma carta cadastrada\n");
+        return;
+    }
+
+    printf("---Cartas Cadastradas---");
+    for (int i = 0; i < quantidade; i++)
+    {
+        printf("\n Carta %d: \n", i=1);
+        printf("codigo : %s\n", cartas[i].codigo);
+        printf("Populacao: %d\n", cartas[i].populacao);
+        printf("Area: %.2f\n", cartas[i].area);
+        printf("Pib: %.2f\n", cartas[i].pib);
+        printf("Pontos Turisticos: %d\n", cartas[i].pontosTuristico);
+    }
+    
+}
 
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.

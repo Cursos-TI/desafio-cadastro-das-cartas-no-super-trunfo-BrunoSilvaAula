@@ -6,6 +6,36 @@
 // Siga os comentários para implementar cada parte do desafio.
 //Teste Bruno
 
+typedef struct
+{
+    char codigo[4];
+    int populacao;
+    float area;
+    float pib;
+    int pontosTuristico;
+}Carta;
+
+void cadastrarCartas(Carta *carta, int *quantidade){
+    printf("\n--- Cadastro de Carta ---\n");
+
+    printf("Digite o codigo(Exemplo: A01):");
+    scanf("%s",carta[*quantidade].codigo);
+
+    printf("Digite a população: ");
+    scanf("%f", &carta[*quantidade].populacao);
+
+    printf("Digite a aréa: ");
+    scanf("%f", &carta[*quantidade].area);
+
+    printf("Digite o numero de pontos turisticos: ");
+    scanf("%d", &carta.[*quantidade].pontosTuristico);
+
+    (*quantidade)++;
+    
+    printf("---Cadastrado com Sucesso---");
+}
+
+
 int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
